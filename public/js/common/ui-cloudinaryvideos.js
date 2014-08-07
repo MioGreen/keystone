@@ -1,8 +1,13 @@
 jQuery(function($) {
-	var supportedTypes = ['image/gif', 'image/png', 'image/jpeg', 'image/bmp', 'image/x-icon', 'application/pdf', 'image/x-tiff', 'image/x-tiff', 'application/postscript', 'image/vnd.adobe.photoshop'];
-	
-	// Cloudinary Images
-	$('.field.type-cloudinaryimages').each(function() {
+	var supportedTypes = [
+    'video/mp4',
+    'video/quicktime',
+    'video/x-msvideo',
+    'video/x-ms-wmv'
+  ];
+
+  // Cloudinary Images
+	$('.field.type-cloudinaryvideos').each(function() {
 		
 		var $el = $(this),
 			data = $el.data();
@@ -184,9 +189,9 @@ jQuery(function($) {
 				async.each(files, function(f, next) {
 					
 					if (!_.contains(supportedTypes, f.type)) {
-            if(!directUploading) $field.remove();
+						if(!directUploading) $field.remove();
 						checkQueues();
-						alert("Unsupported file type. Supported formats are: GIF, PNG, JPG, BMP, ICO, PDF, TIFF, EPS, PSD");
+						alert("Unsupported file type. Supported formats are: MP4, MOV, AVI, VMW");
 						return next();
 					}
 					

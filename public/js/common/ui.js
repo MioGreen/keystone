@@ -46,7 +46,16 @@ jQuery(function($) {
 	
 	$('a[data-toggle=tooltip]').tooltip();
 	
-	$('.ui-datepicker').pikaday({ firstDay: 1 });
+	$('.ui-datepicker').pikaday({
+    firstDay: 1,
+    format: 'DD/MM/YYYY',
+    i18n: {
+      previousMonth : 'Предыдущий',
+      nextMonth     : 'Следующий',
+      months        : ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+      weekdays      : ['Понедельник','Вторник','Среда','Четверг','Пятница','Суббота','Воскресенье'],
+      weekdaysShort : ['Пон','Вт','Ср','Чет','Пят','Суб','Воск']
+    },});
 	
 	$('.ui-select2').select2({ allowClear: true });
 	

@@ -11,6 +11,9 @@ var fs = require('fs'),
 
 var templateCache = {};
 
+// datetime localization
+moment.locale('ru');
+
 /**
  * Don't use process.cwd() as it breaks module encapsulation
  * Instead, let's use module.parent if it's present, or the module itself if there is no parent (probably testing keystone directly if that's the case)

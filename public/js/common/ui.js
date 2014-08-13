@@ -48,7 +48,7 @@ jQuery(function($) {
 
 	var datepickers = $('.ui-datepicker').pikaday({
     firstDay: 1,
-    format: 'DD/MM/YYYY',
+    format: 'DD.MM.YYYY',
     i18n: {
       previousMonth : 'Предыдущий',
       nextMonth     : 'Следующий',

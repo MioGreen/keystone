@@ -2,9 +2,9 @@
 	label.field-label= field.label
 	.field-ui(class='width-' + field.width)
 		if field.noedit
-			.field-value= field.format(item, 'Do MMM YYYY, hh:mm')
+			.field-value= field.format(item, 'DD.MM.YYYY, hh:mm')
 		else
-			input(type='text', name=field.paths.date, value=field.format(item, 'DD/MM/YYYY'), placeholder='DD/MM/YYYY', autocomplete='off').form-control.ui-datepicker
+			input(type='text', name=field.paths.date, value=field.format(item, 'DD.MM.YYYY'), placeholder='DD.MM.YYYY', autocomplete='off').form-control.ui-datepicker
 			a(href=js).btn.btn-default.btn-set-today Today
 			input(type='text', name=field.paths.time, value=field.format(item, 'hh:mm'), placeholder='HH:MM', autocomplete='off').form-control
 	if field.note

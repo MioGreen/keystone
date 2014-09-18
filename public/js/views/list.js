@@ -254,6 +254,7 @@ jQuery(function($) {
 					case 'cloudinaryimage':
 					case 'cloudinaryimages':
 					case 'cloudinaryvideos':
+					case 'cloudinaryfiles':
 					case 's3file':
 						if (data.value) { // where is this defined???
 							queryFilter.value = value;

@@ -63,6 +63,7 @@ jQuery(function($) {
 				case 'cloudinaryimage':
 				case 'cloudinaryimages':
 				case 'cloudinaryvideos':
+				case 'cloudinaryfiles':
 				case 's3file':
 					return $field.data('field-value');
 			}
